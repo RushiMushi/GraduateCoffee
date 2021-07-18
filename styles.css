@@ -52,7 +52,7 @@ table {
 * {
 	text-decoration: none;
 }
-a:visited { 
+a:visited, a link { 
 	text-decoration: none; 
 	color: black; 
 }
