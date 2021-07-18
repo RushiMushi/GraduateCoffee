@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Graduate Coffee</title>
+        <link rel ="stylesheet" href = "styles.css">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href = "#contact" class="contact">Contact</a>
+                <img src="img/ClearLogo.png" alt="ClearLogo" class="header-logo">
+                <a href = "#menu" class="menu">Menu</a>
+            </nav>
+        </header>
+        <main>
+            <div id="home">
+                <div id="left">
+                    <section class="about-banner">
+                        <h2>THE START OF A NEW CLASS</h2>
+                        <h1>We did it. We’re going to graduate! This is Graduate Coffee, a coffee shop that 
+                            feels like a summer vacation but works as if it`s finals week. We’re elevating. 
+                            It`s the start of a new class!</h1>
+                        <a href="#menu"> See Our Menu </a>
+                    </section>
+                    <div class="coffee-banner"></div>
+                </div>
+                <section class="summer-banner" id= "right">
+                    <div>Our New Summer Menu is Out Now</div>
+                    <img src="img/Summer.PNG" alt="Drinks" >
+                </section>
+            </div>
+       
+            <section class="appetite-banner">
+                <h1>Website Powered By</h1>
+                <a href="https://apptitegroup.com/#" target="_blank"  ><img src="img/500.png" ></a> 
+            </section>
+          
+            <section class="menu-banner" id= "menu">
+                <h2> Menu </h2>
+                <div class= "full-list">
+                    <div class="left-list"> 
+                        <h1>
+                            Coffee + Espresso
+                        </h1>
+                        <ul>
+                            <li>Drip Coffee</li>
+                            <li>Cold Brew</li>
+                            <li>Espresso</li>
+                            <li>Cappucino</li>
+                            <li>Latte</li>
+                            <li>Café Americano</li>
+                        </ul>
+                        <h1>
+                            Frozen + Smoothies
+                        </h1>
+                        <ul>
+                            <li>Coffee Frappe</li>
+                            <li>Matcha Frappe</li>
+                            <li>Smoothie</li>
+                        </ul>
+                        <h1>
+                            Summer Menu
+                        </h1>
+                        <ul class = "descriptor-list">
+                            <li>Summer Break <br>(Peach Lemonade <br>Ice Tea)</li>
+                            <li>Pom Pom Spritz <br>(Pomegranate Lemonade <br>Spritzer)</li>
+                            <li>Lavender Twist <br>(Lavender Lemon <br>Cold-Brew Soda)</li>
+                            <li>Strawberry Dream <br>(Oatmilk Strawberry <br>Shortcake Latte)</li>
+                        </ul>
+                    </div>
+                    <div class= "right-list">
+                        <h1 class= "signature">
+                            Signature Drinks
+                        </h1>
+                        <ul class = "descriptor-list">
+                            <li>The Graduate <br>(cookie butter latte)</li>
+                            <li>Nutty Professor <br>(mocha, hazelnut, coconut)</li>
+                            <li>Teacher's Pet <br>(white choc. rasperry puree)</li>
+                            <li>Highschool Sweetheart <br>(cotton candy frappe)</li>
+                        </ul>
+                        <h1>
+                        <h1>
+                            Lunch + Snacks
+                        </h1>
+                        <ul id = "lunch-list">
+                            <li>Bagel with Cream Cheese</li>
+                            <li>Avocado Toast</li>
+                            <li>BLT Avocado Toast</li>
+                            <li>Chicken Salad Sandwich</li>
+                            <li>Turkey Pesto Melt</li>
+                            <li>Hummus Plate</li>
+                            <li>Fruit Plate</li>
+                            <li>*All Available Gluten Free</li>
+                        </ul>
+                        <a href="Menu Board Outline.pdf" target="_blank">See Our Pricing</a>
+                    </div>
+                </div>
+            </section>
+            <section class="contact-banner" id="contact">
+                <div class="contact-box">
+                    <h2>Come Visit Us</h2>
+                    <a href="https://g.page/GraduateCoffee?share" target="_blank">1901 W Southlake Blvd Ste 100, Southlake, TX 76092</a>
+                    <h1 id="socials">Checkout Our Socials</h1>
+                    <div class="contact-social-media">
+                        <a href="https://www.instagram.com/graduate_coffee/" target="_blank" id="insta"><img src="img/instagram2x.png" alt="instagram-logo"></a>
+                        <a href="https://www.facebook.com/Graduate-Coffee-104065078056361" target="_blank" id="fb"><img src="img/fb2x.png" alt="facebook-logo"></a>
+                        
+                    </div>
+                    <div id=email-button><a href="mailto: hello@graduatecoffee.com;" id="email">Say Hi</a></div>
+                </div>
+                <div id='map'></div>
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1IjoicnVzaGltdXNoaSIsImEiOiJja3F0cnptcm4yYzh4MnVxcWFpZW90Y3dpIn0.i5U-lj2g-fAE6Sv1sC1iVA';
+                    var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/mapbox/streets-v11',
+                        center: [ -97.18050021593741,32.94048237776161],
+                        zoom: 12
+                    });
+                    var marker1 = new mapboxgl.Marker({color: 'red'})
+                        .setLngLat([-97.18050021593741,32.94048237776161])
+                        .addTo(map);
+                </script>
+            </section>
+        </main>
+        <footer>
+            <div id="email-footer">
+                <h2>Email Us</h1>
+                <h1>hello@graduatecoffee.com</h1>
+            </div>
+            <div id="visit-footer">
+                <h2>Visit Us</h1>
+                <h1>1901 W Southlake Blvd Ste 100, Southlake, TX 76092</h1>
+            </div>
+            <div id="number-footer">
+                <h2>Call Us</h1>
+                <h1>+1 (817) 912-1403</h1>
+            </div>
+            <div id="social-footer">
+                <a href="https://www.instagram.com/graduate_coffee/" target="_blank"><img src="img/instagram.png" alt="instagram-logo"></a>
+                <a href="https://www.facebook.com/Graduate-Coffee-104065078056361" target="_blank"><img src="img/fbwhite.png" alt="facebook-logo"></a>
+            </div>
+        </footer>
+    </body>
+</html>
